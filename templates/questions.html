@@ -12,8 +12,8 @@
 
 
 <form action="/answers" method="POST">
-    {% for i in question.choices %}
-    <input type="radio" name="qanswer">{{ i }}
+    {% for choice in question.choices %}
+    <input type="radio" name="qanswer" value="{{ choice }}">{{ choice }}
     {% endfor %}
     <br><button>Next Question</button>
 </form>
